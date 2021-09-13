@@ -9,10 +9,10 @@
 <form action="/taco/">
     <p>
         <label for="username">Enter your user name: </label>
-        <input type="text" placeholder="Username" id="username">
+        <input type="text" placeholder="Username" id="username" name="username">
     </p>
     <p><label for="pass">Enter your password:</label>
-        <input type="password" placeholder="Password" id="pass">
+        <input type="password" placeholder="Password" id="pass" name="password">
     </p>
     <table>
         <tbody>
@@ -22,16 +22,16 @@
         </tr>
         <tr>
             <td><label for="number">Enter a number:</label></td>
-            <td><input type="number" id="number"></td>
+            <td><input type="number" id="number" name="number" min="0" max="15"></td>
             <td><label for="color"></label><input type="color" id="color"></td>
         </tr>
         <tr>
             <td><label for="vol">Volumen</label></td>
-            <td><input type="range" id="vol"></td>
+            <td><input type="range" id="vol" name="vol" min="0" max="10" value="5"></td>
         </tr>
         <tr>
             <td><label for="check_tacos">Tacos?</label></td>
-            <td><input type="checkbox" id="check_tacos"></td>
+            <td><input type="checkbox" id="check_tacos" name="check"></td>
         </tr>
         </tbody>
         <tfoot>
@@ -41,6 +41,39 @@
 
 
 
+</form>
+<form action="https://www.google.com/search?">
+    <label for="search">Buqueda en Google</label>
+    <input type="text" placeholder="Buscar" id="search" name="q">
+    <button>Buscar</button>
+</form>
+
+<h2>More inputs</h2>
+<form action="taco/">
+    <input type="checkbox" name="agree_tos" id="agree" checked>
+    <label for="agree">I agree everything</label>
+    <p>
+        <input type="radio" name="size" id="size_s" value="s">
+        <label for="size_s">S</label>
+        <input type="radio" name="size" id="size_m" value="m">
+        <label for="size_s">M</label>
+        <input type="radio" name="size" id="size_l" value="l">
+        <label for="size_s">L</label>
+        <button>Order</button>
+    </p>
+    <p>
+        <label for="select">Select your meal</label>
+        <select name="meal" id="select">
+            <option value="fish">Fish</option>
+            <option value="veggie">Veggie</option>
+            <option value="steak">Steak</option>
+        </select>
+    </p>
+    <p>
+        <label for="story">Tell us your story</label>
+        <textarea id="story" rows="10" cols="30" name="story_line"></textarea>
+        <button>Submit</button>
+    </p>
 </form>
 </body>
 </html>
